@@ -103,79 +103,79 @@
                     </div>
                 </div>
             </form>
-            </div>
-        </div>
-        <div class="formdiv1">
-            <div class="flex flex-col overflow-x-auto">
-                <div class="sm:-mx-6 lg:-mx-8">
-                  <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                    <div class="overflow-x-auto">
-                        <table id="datatable">
-                            <thead class="py-6 bg-primary text-white text-center">
-                                <tr>
-                                    <th class="whitespace-nowrap">@lang('lang.STN')</th>
-                                    <th class="whitespace-nowrap">@lang('lang.Name')</th>
-                                    <th class="whitespace-nowrap">@lang('lang.Email')</th>
-                                    <th class="whitespace-nowrap">@lang('lang.Phone_No')</th>
-                                    <th class="whitespace-nowrap">@lang('lang.Age')</th>
-                                    <th class="flex  justify-center">@lang('lang.Action')</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                @foreach ($fetch as $fetch)
-                                    <tr class="pt-4">
-                                        <th>{{ $loop->iteration }}</th>
-                                        <td>{{ $fetch->fname }}</td>
-                                        <td>{{ $fetch->email }}</td>
-                                        <td>{{ $fetch->phone }}</td>
-                                        <td>{{ $fetch->age }}</td>
-                                        <td>
-                                            <div class="flex gap-5  items-center justify-center">
-
-                                                    <button class="viewpatient  cursor-pointer ms-3  md:w-full" data-patientid="{{$fetch->id}}" ><img width="30px"
-                                                            src="{{ asset('images/icons/Vector (2).jpg') }}"
-                                                            alt="update"></button>
-
-                                        </td>
+            <div class="formdiv1">
+                <div class="flex flex-col overflow-x-auto">
+                    <div class="sm:-mx-6 lg:-mx-8">
+                      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                        <div class="overflow-x-auto">
+                            <table id="datatable">
+                                <thead class="py-6 bg-primary text-white text-center">
+                                    <tr>
+                                        <th class="whitespace-nowrap">@lang('lang.STN')</th>
+                                        <th class="whitespace-nowrap">@lang('lang.Name')</th>
+                                        <th class="whitespace-nowrap">@lang('lang.Email')</th>
+                                        <th class="whitespace-nowrap">@lang('lang.Phone_No')</th>
+                                        <th class="whitespace-nowrap">@lang('lang.Age')</th>
+                                        <th class="flex  justify-center">@lang('lang.Action')</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+
+                                    @foreach ($fetch as $fetch)
+                                        <tr class="pt-4">
+                                            <th>{{ $loop->iteration }}</th>
+                                            <td>{{ $fetch->fname }}</td>
+                                            <td>{{ $fetch->email }}</td>
+                                            <td>{{ $fetch->phone }}</td>
+                                            <td>{{ $fetch->age }}</td>
+                                            <td>
+                                                <div class="flex gap-5  items-center justify-center">
+
+                                                        <button class="viewpatient  cursor-pointer ms-3  md:w-full" data-patientid="{{$fetch->id}}" ><img width="30px"
+                                                                src="{{ asset('images/icons/Vector (2).jpg') }}"
+                                                                alt="update"></button>
+
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+            </div>
+            </div>
         </div>
     </div>
     <div class="parentdiv2 rounded-lg  w-full overflow-hidden md:block   bg-white shadow-dark">
         <h1 class="text-4xl ms-6 mt-5">Details</h1>
      <div class="nameclass ms-5">
-     <p class="text-2xl text-black">Patient Name:</p>
-        <p id="patientname" class="text-xl  text-wrap text-gray"></p>
+     <p class="text-xl  text-black">Patient Name:</p>
+        <p id="patientname" class="text-lg text-wrap text-gray"></p>
         <p class="text-xl text-black">Last Name</p>
-        <p id="patientlname" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-xl text-black">age</p>
-        <p id="patientage" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Datebrith</p>
-        <p id="patientdate" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Gender</p>
-        <p id="patientgender" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">CNIC</p>
-        <p id="patientcnic" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Patient relation</p>
-        <p id="patientrelation" class="text-xl text-gray"></p>
-        <p class="text-2xl text-black">F/H Name</p>
-        <p id="patientidrelation" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Group Blood</p>
-        <p id="patientblood" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Phone</p>
-        <p id="patientphone" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Email</p>
-        <p id="patientemail" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">City</p>
-        <p id="patientcity" class="text-xl  text-wrap text-gray"></p>
-        <p class="text-2xl text-black">Address</p>
+        <p id="patientlname" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Age</p>
+        <p id="patientage" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Datebrith</p>
+        <p id="patientdate" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Gender</p>
+        <p id="patientgender" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">CNIC</p>
+        <p id="patientcnic" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Patient relation</p>
+        <p id="patientrelation" class="text-lg text-gray"></p>
+        <p class="text-xl text-black">F/H Name</p>
+        <p id="patientidrelation" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Group Blood</p>
+        <p id="patientblood" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Phone</p>
+        <p id="patientphone" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Email</p>
+        <p id="patientemail" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">City</p>
+        <p id="patientcity" class="text-text-lg text-wrap text-gray"></p>
+        <p class="text-xl text-black">Address</p>
         <p id="patientaddress" class="text-xl text-wrap text-gray"></p>
      </div>
     </div>
