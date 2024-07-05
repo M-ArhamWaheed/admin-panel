@@ -3,7 +3,7 @@
 
 
 
-   <div class="maindiv1  md:flex">
+   <div class="maindiv1  md:flex sm:overflow-hidden">
     <div class="parentdiv1">
         <div class="formdiv relative p-4 w-full   max-w-6xl max-h-full" >
             <form action="#">
@@ -132,11 +132,11 @@
                                         <td>{{ $fetch->age }}</td>
                                         <td>
                                             <div class="flex gap-5  items-center justify-center">
-                                                <a href="{{ route('view', $fetch->id) }}" class="w-[30px]">
-                                                    <button class="  cursor-pointer   md:w-full"><img width="30px"
+
+                                                    <button class="viewpatient  cursor-pointer ms-3  md:w-full" data-patientid="{{$fetch->id}}" ><img width="30px"
                                                             src="{{ asset('images/icons/Vector (2).jpg') }}"
                                                             alt="update"></button>
-                                                </a>
+
                                         </td>
                                     </tr>
                                 @endforeach
@@ -150,44 +150,72 @@
     </div>
     <div class="parentdiv2 rounded-lg  w-full overflow-hidden md:block   bg-white shadow-dark">
         <h1 class="text-4xl ms-6 mt-5">Details</h1>
-
-        {{-- <div class="div">
-            <img class="logo" src="{{asset('images/icons/Vector (1).jpg')}}" alt="image">
-            <h1 class="ho">Hospital Name</h1>
-            <h2 class="city">Hospital city,Province,Country <br> <span class="span">Phone 0412345678</span></h2>
-            <h1 class="ho1"> Reg # HPTN-{{$viewlist->id}}</h1>
-            <p class="pat">Patient Details</p>
-            <div class="maindiv">
-              <div class="textdiv">
-                  <p class="se">Email</p>
-                  <p class="se">Relation to Applicant</p>
-                  <p class="se">Gender</p>
-                  <p class="se">Age</p>
-                  <p class="se">F/H Name</p>
-                  <p class="se">Phone</p>
-                  <p class="se">CNIC</p>
-                  <p class="se">Billing Group</p>
-                  <a href="{{route('patientvist')}}">
-                      <button class="btn">Back</button>
-                  </a>
-              </div>
-              <div class="contentdiv">
-                  <p class="se">{{$viewlist->email}}</p>
-                  <p class="se">{{$viewlist->fname}}</p>
-                  <p class="se">{{$viewlist->gender}}</p>
-                  <p class="se">{{$viewlist->age}}</p>
-                  <p class="se">{{$viewlist->f_h_name}}</p>
-                  <p class="se">{{$viewlist->phone}}</p>
-                  <p class="se">{{$viewlist->cnic}}</p>
-                  <p class="se">{{$viewlist->billing_group}}</p>
-
-                      <button type="button" class="btn1" id="printData">Print</button>
-
-              </div>
-          </div>
-          </div>
-    </div> --}}
-   </div>
+     <div class="nameclass ms-5">
+     <p class="text-2xl text-black">Patient Name:</p>
+        <p id="patientname" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-xl text-black">Last Name</p>
+        <p id="patientlname" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-xl text-black">age</p>
+        <p id="patientage" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Datebrith</p>
+        <p id="patientdate" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Gender</p>
+        <p id="patientgender" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">CNIC</p>
+        <p id="patientcnic" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Patient relation</p>
+        <p id="patientrelation" class="text-xl text-gray"></p>
+        <p class="text-2xl text-black">F/H Name</p>
+        <p id="patientidrelation" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Group Blood</p>
+        <p id="patientblood" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Phone</p>
+        <p id="patientphone" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Email</p>
+        <p id="patientemail" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">City</p>
+        <p id="patientcity" class="text-xl  text-wrap text-gray"></p>
+        <p class="text-2xl text-black">Address</p>
+        <p id="patientaddress" class="text-xl text-wrap text-gray"></p>
+     </div>
+    </div>
 
 
 @include('layouts.footer')
+<script>
+    $('.viewpatient').click(function() {
+        console.log("ghgh");
+            var patientid = $(this).attr('data-patientid');
+            var url = "/fetchpatient/" + patientid;
+            console.log(patientid)
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function(response) {
+                                    var patients = response.patients;
+
+                    $('#patientname').text(patients.fname);
+                    $('#patientlname').text(patients.l_name);
+                    $('#patientage').text(patients.datebirth);
+                    $('#patientdate').text(patients.age);
+                    $('#patientgender').text(patients.gender);
+                    $('#patientcnic').text(patients.cnic);
+                    $('#patientrelation').text(patients.relation);
+                    $('#patientidrelation').text(patients.f_h_name);
+                    $('#patientblood').text(patients.billing_group);
+                    $('#patientphone').text(patients.phone);
+                    $('#patientemail').text(patients.email);
+                    $('#patientcity').text(patients.city);
+                    $('#patientaddress').text(patients.address);
+
+                },
+            });
+        });
+        function showAlert() {
+    var myText = "Are You sure delete this data";
+    alert (myText);
+
+
+  }
+</script>
