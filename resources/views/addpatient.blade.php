@@ -228,7 +228,7 @@
                         class="w-full h-12  border-[#DEE2E6] rounded-[4px] focus:border-primary text-[14px] "
                         placeholder="@lang('lang.Address_Here')"></textarea>
                 </div>
-                {{-- buttons sectionn --}}
+                {{-- ------- buttons sectionn ------- --}}
                 <div class="flex justify-end ">
                     <a href="{{ route('view', isset($fetch->id) ? $fetch->id : '') }}"
                         class="bg-[#6581EF] text-white py-2 px-6 my-4 rounded-[4px]  mx-6 uaddBtn  font-semibold "
