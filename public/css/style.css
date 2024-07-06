@@ -274,7 +274,7 @@ table.dataTable.no-footer {
     }
 
 }
-.parentdiv2{
+/* .parentdiv2{
     height: fit-content;
     width: 50%;
     margin-top: 67px;
@@ -282,4 +282,4 @@ table.dataTable.no-footer {
     flex-wrap:nowrap;
     text-wrap: wrap;
     /* background-color: greenyellow; */
-}
+/*  */

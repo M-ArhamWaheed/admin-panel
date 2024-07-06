@@ -9,11 +9,11 @@
             <form action="#">
             <div class="relative bg-white shadow-dark rounded-lg  dark:bg-gray-700  ">
                 <div class="flex items-center   justify-start  py-5  rounded-t dark:border-gray-600 ">
-                    <div class="grid md:grid-cols-2 gap-6 mx-6 ">
+                    <div class="grid md:grid-cols-2 gap-6 mx-6 w-full">
                         <div>
                             <label class="text-[14px] font-bold ml-5" for="fullName">@lang('lang.First Name')</label>
                             <input type="text" required
-                                class="w-full border-[#DEE2E6] ml-4 rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
+                                class="w-full  border-[#DEE2E6] ml-4 rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                                 name="fname" id="fname"  placeholder="@lang('lang.Name Here')">
                         </div>
                         <div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttonsdiv overflow-hidden block justify-start md:flex">
+                <div class="buttonsdiv overflow-hidden block justify-start md:flex ">
                     <div class="button">
                         <button class="bg-green-700 text-white py-2 px-6 my-6 rounded-[4px] mx-7  md:mx-10 uaddBtn  font-semibold "
                         name="sumbit" id="btndata">
@@ -104,7 +104,7 @@
                 </div>
             </form>
             <div class="formdiv1">
-                <div class="flex flex-col overflow-x-auto">
+                <div class="flex flex-col overflow-x-auto w-full">
                     <div class="sm:-mx-6 lg:-mx-8">
                       <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-x-auto">
@@ -148,37 +148,37 @@
             </div>
         </div>
     </div>
-    <div class="parentdiv2 rounded-lg  w-full overflow-hidden md:block   bg-white shadow-dark">
+    {{-- <div class="parentdiv2 rounded-lg  w-full overflow-hidden md:block   bg-white shadow-dark">
         <h1 class="text-4xl ms-6 mt-5">Details</h1>
      <div class="nameclass ms-5">
-     <p class="text-xl  text-black">Patient Name:</p>
+     <p class="text-[18px]  text-black">Patient Name:</p>
         <p id="patientname" class="text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Last Name</p>
+        <p class="text-[18px]  text-black">Last Name</p>
         <p id="patientlname" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Age</p>
+        <p class="text-[18px]  text-black">Age</p>
         <p id="patientage" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Datebrith</p>
+        <p class="text-[18px]  text-black">Datebrith</p>
         <p id="patientdate" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Gender</p>
+        <p class="text-[18px]  text-black">Gender</p>
         <p id="patientgender" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">CNIC</p>
+        <p class="text-[18px]  text-black">CNIC</p>
         <p id="patientcnic" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Patient relation</p>
+        <p class="text-[18px]  text-black">Patient relation</p>
         <p id="patientrelation" class="text-lg text-gray"></p>
-        <p class="text-xl text-black">F/H Name</p>
+        <p class="text-[18px]  text-black">F/H Name</p>
         <p id="patientidrelation" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Group Blood</p>
+        <p class="text-[18px]  text-black">Group Blood</p>
         <p id="patientblood" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Phone</p>
+        <p class="text-[18px]  text-black">Phone</p>
         <p id="patientphone" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Email</p>
+        <p class="text-[18px]  text-black">Email</p>
         <p id="patientemail" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">City</p>
+        <p class="text-[18px]  text-black">City</p>
         <p id="patientcity" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-xl text-black">Address</p>
+        <p class="text-[18px]  text-black">Address</p>
         <p id="patientaddress" class="text-xl text-wrap text-gray"></p>
      </div>
-    </div>
+    </div> --}}
 
 
 @include('layouts.footer')

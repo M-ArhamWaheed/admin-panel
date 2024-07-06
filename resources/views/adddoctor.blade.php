@@ -34,7 +34,7 @@
                             <tr class="pt-4">
                                 <th>{{ $loop->iteration }}</th>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>{{ isset($user->l_name) ? $user->l_name : '' }}</td>
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->age }}</td>
 
@@ -296,13 +296,13 @@
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="name" id="fullName" placeholder=" @lang('lang.Name_Here')"
-                            value="{{ $user->name }}">
+                            value="{{ isset($user->name) ? $user->name : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="lastname">@lang('lang.Last Name')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="l_name" id="l_name" placeholder="@lang('lang.Last Name')" value="{{ $user->l_name }}">
+                            name="l_name" id="l_name" placeholder="@lang('lang.Last Name')" value="{{ isset($user->l_name) ? $user->l_name : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="Date of brith">
@@ -310,7 +310,7 @@
                         <input type="date"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="datebirth" id="datebirth" placeholder="@lang('lang.Date of brith')"
-                            value="{{ $user->datebirth }}">
+                            value="{{ isset($user->datebirth) ? $user->datebirth : '' }}">
 
                     </div>
                 </div>
@@ -322,21 +322,21 @@
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="age" id="age" placeholder=" @lang('lang.Age')"
-                            value="{{ $user->age }}">
+                            value="{{ isset($user->age) ? $user->age : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="gender">@lang('lang.Gender')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="gender" id="gender" placeholder=" @lang('lang.Gender Here')"
-                            value="{{ $user->gender }}">
+                            value="{{ isset($user->gender) ? $user->gender : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="specialist">@lang('lang.Specialist')</label>
                         <input type="text"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="specialist" id="specialist" placeholder=" @lang('lang.Specialist Here')"
-                            value="{{ $user->specialist }}">
+                            value="{{ isset($user->specialist) ? $user->specialist : '' }}">
 
                     </div>
                 </div>
@@ -351,28 +351,28 @@
                         <input type="tel" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="phone" id="phone" placeholder=" @lang('lang.Contact Here')"
-                            value="{{ $user->phone }}">
+                            value="{{ isset($user->phone) ? $user->phone : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="email">@lang('lang.Email')</label>
                         <input type="email" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="email" id="email" placeholder=" @lang('lang.Email Here')"
-                            value="{{ $user->email }}">
+                            value="{{ isset($user->email) ? $user->email : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="city">@lang('lang.City')</label>
                         <input type="text"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="city" id="city" placeholder=" @lang('lang.City Here')"
-                            value="{{ $user->city }}">
+                            value="{{ isset($user->city) ? $user->city : '' }}">
 
                     </div>
                 </div>
                 {{-- contact_address --}}
                 <div class="mt-2  mx-6">
                     <label class="text-[14px] font-bold" for="Address">@lang('lang.Address')</label>
-                    <textarea name="address" id="address" value="{{ $user->address }}"
+                    <textarea name="address" id="address" value="{{ isset($user->address) ? $user->address : '' }}"
                         class="w-full h-12  border-[#DEE2E6] rounded-[4px] focus:border-primary text-[14px] "
                         placeholder="@lang('lang.Address_Here')"></textarea>
                 </div>
@@ -386,21 +386,21 @@
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="l_number" id="l_number" placeholder="@lang('lang.License Number Here')"
-                            value="{{ $user->l_number }}">
+                            value="{{ isset($user->l_number) ? $user->l_number : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="I_Authority">@lang('lang.Issuing Authority')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="i_Authority" id="i_Authority" placeholder=" @lang('lang.Issuing Authority')"
-                            value="{{ $user->i_Authroity }}">
+                            value="{{ isset($user->i_Authority) ? $user->i_Authority : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="Expiration">@lang('lang.Expiration Date')</label>
                         <input type="text"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="expiration" id="expiration" placeholder=" @lang('lang.Expiration Here')"
-                            value="{{ $user->expiration }}">
+                            value="{{ isset($user->expiration) ? $user->expiration : '' }}">
 
                     </div>
                 </div>
@@ -414,21 +414,21 @@
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="m_school" id="m_school" placeholder="@lang('lang.Medical School')"
-                            value="{{ $user->m_school }}">
+                            value="{{ isset($user->m_school) ? $user->m_school : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="graduation">@lang('lang.Graduation Year')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="graduation" id="graduation" placeholder=" @lang('lang.Graduation Year')"
-                            value="{{ $user->graduation }}">
+                            value="{{ isset($user->graduction) ? $user->graduction : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="Residency">@lang('lang.Residency')</label>
                         <input type="text"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
                             name="residency" id="residency" placeholder=" @lang('lang.Residency Here')"
-                            value="{{ $user->residency }}">
+                            value="{{ isset($user->residency) ? $user->residency : '' }}">
 
                     </div>
                 </div>
@@ -438,11 +438,11 @@
 
                     <textarea name="message" id="message"
                         class="w-full h-24  border-[#DEE2E6] rounded-[4px] focus:border-primary text-[14px] "
-                        placeholder="@lang('lang.Message Here')" value="{{ $user->message }}"></textarea>
+                        placeholder="@lang('lang.Message Here')" value="{{ isset($user->message) ? $user->message : '' }}"></textarea>
                 </div>
                 <div class="flex justify-end ">
                     <div class="flex justify-end ">
-                        <a href="{{ route('doctorpage', $user->id) }}"
+                        <a href="#"
                             class="bg-[#6581EF] text-white py-2 px-6 my-4 rounded-[4px]  mx-6 uaddBtn  font-semibold "
                             name="sumbit" id="addBtn">
                             <div class=" text-center hidden" id="spinner">

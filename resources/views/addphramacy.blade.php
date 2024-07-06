@@ -102,19 +102,19 @@
                         <label class="text-[14px] font-bold" for="name">@lang('lang.Name')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="name" id="name" placeholder=" @lang('lang.Name_Here')" value="{{$data->name}}">
+                            name="name" id="name" placeholder=" @lang('lang.Name_Here')" value="{{ isset($data->name) ? $data->name : '' }}">
                     </div>
                     <div>
                <label class="text-[14px] font-bold" for="Phoneno">@lang('lang.Phone')</label>
                         <input type="tel" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="phone" id="phone" placeholder="@lang('lang.041-123456789')" value="{{$data->phone}}">
+                            name="phone" id="phone" placeholder="@lang('lang.041-123456789')" value="{{ isset($data->phone) ? $data->phone : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="tele">@lang('lang.Telephone')</label>
                                  <input type="tel" required
                                      class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-    name="telephone" id="telephone" placeholder="@lang('lang.Telephone')" value="{{$data->telephone}}">
+    name="telephone" id="telephone" placeholder="@lang('lang.Telephone')" value="{{ isset($data->telephone) ? $data->telephone : '' }}">
                              </div>
                 </div>
 
@@ -124,14 +124,14 @@
                         <label class="text-[14px] font-bold" for="email">@lang('lang.Email')</label>
                         <input type="email" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="email" id="email" placeholder=" @lang('lang.Email Here')" value="{{$data->email}}">
+                            name="email" id="email" placeholder=" @lang('lang.Email Here')" value="{{ isset($data->email) ? $data->email : '' }}">
                     </div>
 
                     <div>
                         <label class="text-[14px] font-bold" for="address">@lang('lang.Address')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="address" id="address" placeholder=" @lang('lang.Address_Here')" value="{{$data->address}}">
+                            name="address" id="address" placeholder=" @lang('lang.Address_Here')" value="{{ isset($data->address) ? $data->address : '' }}">
                     </div>
                 </div>
 
@@ -144,20 +144,20 @@
                     <label class="text-[14px] font-bold" for="fullName">@lang('lang.First Name')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="fname" id="fname" placeholder=" @lang('lang.Name Here')" value="{{$data->fname}}">
+                            name="fname" id="fname" placeholder=" @lang('lang.Name Here')" value="{{ isset($data->fname) ? $data->fname : '' }}">
                     </div>
                     <div>
             <label class="text-[14px] font-bold" for="lastname">@lang('lang.Last Name')</label>
                         <input type="text" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="l_name" id="l_name" placeholder="@lang('lang.Last Name')" value="{{$data->l_name}}">
+                            name="l_name" id="l_name" placeholder="@lang('lang.Last Name')" value="{{ isset($data->l_name) ? $data->l_name : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="Date of brith">
                             @lang('lang.Date of brith')</label>
                         <input type="date"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="datebirth" id="Datebirth" placeholder="@lang('lang.Date of brith')" value="{{$data->datebirth}}">
+                            name="datebirth" id="Datebirth" placeholder="@lang('lang.Date of brith')" value="{{ isset($data->datebirth) ? $data->datebirth : '' }}">
 
                     </div>
                 </div>
@@ -167,19 +167,19 @@
                         <label class="text-[14px] font-bold" for="phone">@lang('lang.Phone')</label>
                         <input type="tel" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="phoneno" id="phone" placeholder=" @lang('lang.Phone_Here')" value="{{$data->phone}}">
+                            name="phoneno" id="phone" placeholder=" @lang('lang.Phone_Here')" value="{{ isset($staff->name) ? $staff->name : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="email">@lang('lang.Email')</label>
                         <input type="email" required
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="emailaddress" id="email" placeholder=" @lang('lang.Email Here')" value="{{$data->email}}">
+                            name="emailaddress" id="email" placeholder=" @lang('lang.Email Here')" value="{{ isset($data->emailaddress) ? $data->emailaddress : '' }}">
                     </div>
                     <div>
                         <label class="text-[14px] font-bold" for="city">@lang('lang.City')</label>
                         <input type="text"
                             class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                            name="city" id="city" placeholder=" @lang('lang.City Here')" value="{{$data->city}}">
+                            name="city" id="city" placeholder=" @lang('lang.City Here')" value="{{ isset($data->city) ? $data->city : '' }}">
 
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                         {{-- contact_address --}}
                 <div class="mt-2  mx-6">
                     <label class="text-[14px] font-bold" for="Address">@lang('lang.Address')</label>
-                    <textarea name="addresses" id="Addresses" value="{{$data->address}}"
+                    <textarea name="addresses" id="Addresses" value="{{ isset($data->addresses) ? $data->addresses : '' }}"
                         class="w-full h-12  border-[#DEE2E6] rounded-[4px] focus:border-primary text-[14px] "
                         placeholder="@lang('lang.Address_Here')"></textarea>
                 </div>
@@ -201,13 +201,13 @@
              <label class="text-[14px] font-bold" for="license">@lang('lang.License Number')</label>
                     <input type="text" required
                         class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                        name="license" id="license" placeholder=" @lang('lang.License Number Here')" value="{{$data->license}}">
+                        name="license" id="license" placeholder=" @lang('lang.License Number Here')" value="{{ isset($data->license) ? $data->license : '' }}">
                 </div>
                 <div>
                     <label class="text-[14px] font-bold" for="Work">@lang('lang.Work Experience')</label>
                     <input type="text" required
                         class="w-full border-[#DEE2E6] rounded-[4px] focus:border-primary   h-[40px] text-[14px]"
-                        name="work" id="work" placeholder=" @lang('lang.Work Experience')" value="{{$data->work}}">
+                        name="work" id="work" placeholder=" @lang('lang.Work Experience')" value="{{ isset($data->work) ? $data->work : '' }}">
                 </div>
 
             </div>
@@ -215,7 +215,7 @@
 
 
                 <div class="flex justify-end ">
-                    <a href="{{route('phramacypage', $data->id)}}"
+                    <a href="#"
 
                         class="bg-[#6581EF] text-white py-2 px-6 my-4 rounded-[4px]  mx-6 uaddBtn  font-semibold "
                         name="sumbit" id="addBtn">
