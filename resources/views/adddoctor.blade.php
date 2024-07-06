@@ -1,5 +1,7 @@
 @include('layouts.header')
 @include('layouts.nav')
+
+
 <div class="md:mx-4 mt-12">
     <div>
         <h1 class=" font-semibold   text-2xl ">@lang('lang.All Doctor')</h1>
