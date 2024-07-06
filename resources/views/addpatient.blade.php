@@ -27,6 +27,8 @@
                             <th class="flex  justify-center">@lang('lang.Action')</th>
                         </tr>
                     </thead>
+
+                    {{--  --}}
                     <tbody>
 
                         @foreach ($fetch as $fetch)
@@ -61,6 +63,7 @@
                             </tr>
                         @endforeach
                     </tbody>
+                    {{--  --}}
                 </table>
             </div>
 
