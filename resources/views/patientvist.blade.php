@@ -131,7 +131,7 @@
                                             <td>
                                                 <div class="flex gap-5  items-center justify-center">
 
-                                                        <button class="viewpatient  cursor-pointer ms-3  md:w-full" data-patientid="{{$fetch->id}}" ><img width="30px"
+                                                        <button class="viewpatient  cursor-pointer   md:w-full" data-patientid="{{$fetch->id}}" ><img class="ms-10" width="30px"
                                                                 src="{{ asset('images/icons/Vector (2).jpg') }}"
                                                                 alt="update"></button>
 
