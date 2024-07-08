@@ -151,6 +151,10 @@
 
 
 
+
+
+
+    
 @include('layouts.footer')
 <script>
     $('.viewpatient').click(function() {
