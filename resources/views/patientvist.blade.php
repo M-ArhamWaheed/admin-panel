@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttonsdiv overflow-hidden block justify-start md:flex ">
+                <div class="buttonsdiv overflow-hidden block justify-between md:flex ">
                     <div class="button">
                         <button class="bg-green-700 text-white py-2 px-6 my-6 rounded-[4px] mx-7  md:mx-10 uaddBtn  font-semibold "
                         name="sumbit" id="btndata">
@@ -59,7 +59,7 @@
                     </div>
                     <div class="button ">
                      <a href="#">
-                        <button  class="bg-green-700 text-white py-2 px-6 my-6 rounded-[4px]  mx-6 md:mx-40  uaddBtn  font-semibold "
+                        <button  class="bg-green-700 text-white py-2 px-6 my-6 rounded-[4px]  mx-6  uaddBtn  font-semibold "
                         name="sumbit" id="btndata">
                         <div class=" text-center hidden" id="spinner">
                             <svg aria-hidden="true"
@@ -81,7 +81,7 @@
                     </div>
                     <div class="button1">
                        <a href="#">
-                        <button class="bg-green-700  text-white py-2 px-6 my-6 rounded-[4px]  mx-6 md:mx-10 uaddBtn  font-semibold "
+                        <button class="bg-green-700  text-white py-2 px-6 my-6 rounded-[4px]  mx-6  uaddBtn  font-semibold "
                         name="sumbit" id="btndata">
                         <div class=" text-center hidden" id="spinner">
                             <svg aria-hidden="true"
