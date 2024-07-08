@@ -148,37 +148,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="parentdiv2 rounded-lg  w-full overflow-hidden md:block   bg-white shadow-dark">
-        <h1 class="text-4xl ms-6 mt-5">Details</h1>
-     <div class="nameclass ms-5">
-     <p class="text-[18px]  text-black">Patient Name:</p>
-        <p id="patientname" class="text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Last Name</p>
-        <p id="patientlname" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Age</p>
-        <p id="patientage" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Datebrith</p>
-        <p id="patientdate" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Gender</p>
-        <p id="patientgender" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">CNIC</p>
-        <p id="patientcnic" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Patient relation</p>
-        <p id="patientrelation" class="text-lg text-gray"></p>
-        <p class="text-[18px]  text-black">F/H Name</p>
-        <p id="patientidrelation" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Group Blood</p>
-        <p id="patientblood" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Phone</p>
-        <p id="patientphone" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Email</p>
-        <p id="patientemail" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">City</p>
-        <p id="patientcity" class="text-text-lg text-wrap text-gray"></p>
-        <p class="text-[18px]  text-black">Address</p>
-        <p id="patientaddress" class="text-xl text-wrap text-gray"></p>
-     </div>
-    </div> --}}
+
 
 
 @include('layouts.footer')
