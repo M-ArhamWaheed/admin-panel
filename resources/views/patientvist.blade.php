@@ -80,8 +80,9 @@
                      </a>
                     </div>
                     <div class="button1">
-                       <a href="#">
-                        <button class="bg-green-700  text-white py-2 px-6 my-6 rounded-[4px]  mx-6  uaddBtn  font-semibold "
+                       {{-- <a href="#"> --}}
+                        <button data-modal-target="doctoresmodal"
+                        data-modal-toggle="doctoresmodal" class="bg-green-700  text-white py-2 px-6 my-6 rounded-[4px]  mx-6  uaddBtn  font-semibold "
                         name="sumbit" id="btndata">
                         <div class=" text-center hidden" id="spinner">
                             <svg aria-hidden="true"
@@ -99,7 +100,7 @@
                             @lang('lang.Register')
                         </div>
                     </button>
-                       </a>
+                       {{-- </a> --}}
                     </div>
                 </div>
             </form>
@@ -153,8 +154,39 @@
 
 
 
+    <div id="doctoresmodal" data-modal-backdrop="static"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0  left-0 z-50 justify-center  w-full md:inset-0 h-[calc(100%-1rem)] max-h-full ">
+    <div class="relative p-4 w-full   max-w-6xl max-h-full ">
+        {{-- <form method="POST" action="/addDoctors">
+            @csrf --}}
+            <div class="relative bg-white shadow-dark rounded-lg  dark:bg-gray-700  ">
+                <div class="flex items-center   justify-start  p-5  rounded-t dark:border-gray-600 bg-primary">
+                    <h3 class="text-xl font-semibold text-white ">
+                        @lang('lang.Add Doctor')
+                    </h3>
+                    <button type="button"
+                        class=" absolute right-2 text-white bg-transparent rounded-lg text-sm w-8 h-8 ms-auto "
+                        data-modal-hide="doctoresmodal">
+                        <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <h1 class="font-bold mx-6 mt-2">Personal information</h1>
+                </div>
+              <form action="#">
+                <label for="">
+                    mvvvvv
+                </label>
+              </form>
+                </div>
+            </div>
+    </div>
+</div>
 
-    
 @include('layouts.footer')
 <script>
     $('.viewpatient').click(function() {
