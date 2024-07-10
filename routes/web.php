@@ -194,4 +194,7 @@ Route::middleware('custom')->group(function () {
     Route::get('/doctorboard', function () {
         return view('doctordashboard');
     })->name('doctorpanel');
+    Route::get('/doctor', function () {
+        return view('doctor');
+    })->name('doctor');
 });
