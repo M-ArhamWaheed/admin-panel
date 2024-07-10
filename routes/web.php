@@ -39,23 +39,23 @@ Route::middleware('custom')->group(function () {
 
 
 
-                // adddoctor
-              Route::get('/adddoctor' , function(){
-                          return view ('adddoctor');
-              });
+    // adddoctor
+    Route::get('/adddoctor', function () {
+        return view('adddoctor');
+    });
 
-            //   addpatient
-            Route::get('/addpatient' , function(){
-                return view ('addpatient');
+    //   addpatient
+    Route::get('/addpatient', function () {
+        return view('addpatient');
     })->name('addpatient');
 
 
 
-        // addphramacy
-        Route::get('/addphramacy' , function(){
-            return view ('addphramacy');
-});
-//   ########### button section ##############
+    // addphramacy
+    Route::get('/addphramacy', function () {
+        return view('addphramacy');
+    });
+    //   ########### button section ##############
 
 
     // customers CRUD
@@ -64,51 +64,51 @@ Route::middleware('custom')->group(function () {
     // Route::get('/delCustomer/{user_id}', [userController::class,  'delCustomer']);
     // Route::get('/CustomerUpdateData/{user_id}', [userController::class,  'CustomerUpdateData']);
     // Route::post('/CustomerUpdate/{user_id}', [userController::class,  'CustomerUpdate']);
-});
-
-
-Route::get('email', function () {
-
-    return view("emails.parent");
-});
 
 
 
+    Route::get('email', function () {
 
-                    //.////////////////// patients add in database///////////////////////
-Route::match(['get', 'post'], '/addPatient', [TestController::class, 'register']);
+        return view("emails.parent");
+    });
 
 
 
 
-
-
-                    //.////////////////// doctoradd in database///////////////////////
-Route::match(['get', 'post'], '/addDoctors', [DoctoreController::class, 'doctor']);
-
+    //.////////////////// patients add in database///////////////////////
+    Route::match(['get', 'post'], '/addPatient', [TestController::class, 'register']);
 
 
 
-                    //.////////////////// doctoradd in database///////////////////////
-Route::match(['get', 'post'], '/ addstaffs', [AddstaffController::class, 'staff']);
 
 
-            // fetchdata in database all tables
-  Route::get('/patient',[TestController::class,'patient'])->name('patientfetch');
-  Route::get('/addpharmacy',[PhamacyController::class,'addpharmacy'])->name('pharmacyfetch');
-  Route::get('/doctoradd',[DoctoreController::class,'doctoradd'])->name('doctorfetch');
-  Route::get('/allstaff',[AddstaffController::class,'allstaff'])->name('addstafffetch');
+
+    //.////////////////// doctoradd in database///////////////////////
+    Route::match(['get', 'post'], '/addDoctors', [DoctoreController::class, 'doctor']);
+
+
+
+
+    //.////////////////// doctoradd in database///////////////////////
+    Route::match(['get', 'post'], '/ addstaffs', [AddstaffController::class, 'staff']);
+
+
+    // fetchdata in database all tables
+    Route::get('/patient', [TestController::class, 'patient'])->name('patientfetch');
+    Route::get('/addpharmacy', [PhamacyController::class, 'addpharmacy'])->name('pharmacyfetch');
+    Route::get('/doctoradd', [DoctoreController::class, 'doctoradd'])->name('doctorfetch');
+    Route::get('/allstaff', [AddstaffController::class, 'allstaff'])->name('addstafffetch');
 
 
     // ////////////////////////////deletedatapatient
-    Route::get('/deletestaff/{id}',[TestController::class, 'delete'])->name('deletestaff');
-    Route::get('/deletedoctor/{id}',[DoctoreController::class, 'delete'])->name('deletedoc');
-    Route::get('/deletephamacy/{id}',[PhamacyController::class, 'delete'])->name('deletephamacy');
-    Route::get('/deleteadd/{id}',[AddstaffController::class, 'delete'])->name('delete');
+    Route::get('/deletestaff/{id}', [TestController::class, 'delete'])->name('deletestaff');
+    Route::get('/deletedoctor/{id}', [DoctoreController::class, 'delete'])->name('deletedoc');
+    Route::get('/deletephamacy/{id}', [PhamacyController::class, 'delete'])->name('deletephamacy');
+    Route::get('/deleteadd/{id}', [AddstaffController::class, 'delete'])->name('delete');
 
-//   ///////////////////////////phamacy
-Route::get('/phamacy',[PhamacyController::class,'phamacy'])->name('phamacy');
-Route::match(['get', 'post'], '/addphamacies', [PhamacyController::class, 'phamacy']);
+    //   ///////////////////////////phamacy
+    Route::get('/phamacy', [PhamacyController::class, 'phamacy'])->name('phamacy');
+    Route::match(['get', 'post'], '/addphamacies', [PhamacyController::class, 'phamacy']);
 
 
     //  /////////patientlist////////////////
@@ -117,48 +117,25 @@ Route::match(['get', 'post'], '/addphamacies', [PhamacyController::class, 'phama
         return view("patientlist");
     })->name('patientlist');
 
-         /////////////viewpatientdata//////////////////////////
-         Route::get('/view/{id}',[TestController::class,'view'])->name('view');
+    /////////////viewpatientdata//////////////////////////
+    Route::get('/view/{id}', [TestController::class, 'view'])->name('view');
 
 
-        //
-        Route::get('viewpatient', function () {
+    //
+    Route::get('viewpatient', function () {
 
-            return view("viewpatient");
-        })->name('viewpatient');
-
-
-             ///////////////////////viewdoctor////////////////////////////////////////
-
-Route::get('doctorlist', function () {
-    return view("doctorlist");
-})->name('doctorlist');
-
-Route::get('/doctorpage/{id}',[DoctoreController::class,'doctorpage'])->name('doctorpage');
-Route::get('',[CountController::class,'getPatients']);
+        return view("viewpatient");
+    })->name('viewpatient');
 
 
+    ///////////////////////viewdoctor////////////////////////////////////////
 
+    Route::get('doctorlist', function () {
+        return view("doctorlist");
+    })->name('doctorlist');
 
-
-
-
-             ///////////////////////viewstafflist////////////////////////////////////////
-
-             Route::get('addstafflist', function () {
-                return view("addstafflist");
-            })->name('addstafflist');
-
-            Route::get('/staffpage/{id}',[AddstaffController::class,'staffpage'])->name('staffpage');
-
-
-  ///////////////////////viewphramacylist////////////////////////////////////////
-
-  Route::get('phramacylist', function () {
-    return view("phramacylist");
-})->name('phramacylist');
-
-Route::get('/phramacypage/{id}',[PhamacyController::class,'phramacypage'])->name('phramacypage');
+    Route::get('/doctorpage/{id}', [DoctoreController::class, 'doctorpage'])->name('doctorpage');
+    Route::get('', [CountController::class, 'getPatients']);
 
 
 
@@ -166,31 +143,55 @@ Route::get('/phramacypage/{id}',[PhamacyController::class,'phramacypage'])->name
 
 
 
+    ///////////////////////viewstafflist////////////////////////////////////////
+
+    Route::get('addstafflist', function () {
+        return view("addstafflist");
+    })->name('addstafflist');
+
+    Route::get('/staffpage/{id}', [AddstaffController::class, 'staffpage'])->name('staffpage');
 
 
-               ////////////////////// updatepatientdata//////////////////
-Route::post('datapatient/{id}' , [TestController::class ,'datapatient'])->name('datapatient');
-Route::get('/fetchpatient/{id}',[TestController::class ,'update'])->name('fetchpatient');
-             ////////////////////// updatedoctoredata//////////////////////
-Route::get('/fetchdoctor/{id}',[DoctoreController::class ,'updatedoc'])->name('fetchdoctor');
-Route::post('update_data/{id}' , [DoctoreController::class ,'update_data'])->name('update_data');
-            ////////////////////////updatestaffdata////////////////////////
-Route::get('/fetchstaffdata/{id}',[addstaffController::class ,'staffupdate'])->name('fetchstaffdata');
-Route::post('datastaff/{id}' , [addstaffController::class ,'datastaff'])->name('datastaff');
-               ///////////////////////// updatephamacy/////////////////////////
+    ///////////////////////viewphramacylist////////////////////////////////////////
 
-Route::get('/fetchdataphramacy/{id}',[PhamacyController::class ,'phamcaydata'])->name('fetchdataphramacy');
-Route::post('phramacyupdate/{id}' , [PhamacyController::class ,'phramacyupdate'])->name('phramacyupdate');
+    Route::get('phramacylist', function () {
+        return view("phramacylist");
+    })->name('phramacylist');
 
-        ///////////////// patientvisitedata//////////////////////////
-
-Route::get('/visite',[TestController::class,'visite'])->name('patientfetchvist');
+    Route::get('/phramacypage/{id}', [PhamacyController::class, 'phramacypage'])->name('phramacypage');
 
 
-Route::get('/viewvist/{id}',[TestController::class,'viewvist'])->name('viewvist');
 
 
-            //////////////////////doctorpanelcode////////////////////////
-Route::get('/doctorboard', function () {
-    return view('doctordashboard');
-})->name('doctorpanel');
+
+
+
+
+
+    ////////////////////// updatepatientdata//////////////////
+    Route::post('datapatient/{id}', [TestController::class, 'datapatient'])->name('datapatient');
+    Route::get('/fetchpatient/{id}', [TestController::class, 'update'])->name('fetchpatient');
+    ////////////////////// updatedoctoredata//////////////////////
+    Route::get('/fetchdoctor/{id}', [DoctoreController::class, 'updatedoc'])->name('fetchdoctor');
+    Route::post('update_data/{id}', [DoctoreController::class, 'update_data'])->name('update_data');
+    ////////////////////////updatestaffdata////////////////////////
+    Route::get('/fetchstaffdata/{id}', [addstaffController::class, 'staffupdate'])->name('fetchstaffdata');
+    Route::post('datastaff/{id}', [addstaffController::class, 'datastaff'])->name('datastaff');
+    ///////////////////////// updatephamacy/////////////////////////
+
+    Route::get('/fetchdataphramacy/{id}', [PhamacyController::class, 'phamcaydata'])->name('fetchdataphramacy');
+    Route::post('phramacyupdate/{id}', [PhamacyController::class, 'phramacyupdate'])->name('phramacyupdate');
+
+    ///////////////// patientvisitedata//////////////////////////
+
+    Route::get('/visite', [TestController::class, 'visite'])->name('patientfetchvist');
+
+
+    Route::get('/viewvist/{id}', [TestController::class, 'viewvist'])->name('viewvist');
+
+
+    //////////////////////doctorpanelcode////////////////////////
+    Route::get('/doctorboard', function () {
+        return view('doctordashboard');
+    })->name('doctorpanel');
+});
