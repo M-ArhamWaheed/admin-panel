@@ -17,6 +17,9 @@ module.exports = {
                 gray: "#999999",
                 dblue: "#233A85",
             },
+            fontFamily: {
+                inter: ["Inter, sans-serif"],
+            },
         },
     },
     plugins: [require("flowbite/plugin")],
